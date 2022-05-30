@@ -13,6 +13,7 @@
       object-fit: cover;
       margin-right: 20px;
     }
+  }
 
     .cellWithStatus{
       padding:5px;
@@ -32,5 +33,23 @@
       }
     }
 
+    .cellAction{
+      display:flex;
+      align-items: center;
+      gap:15px;
+
+      .viewButton{
+        padding:2px 5px;
+        border-radius: 5px;
+        color:darkblue;
+        border:1px dotted darkblue
+      }
+      .deleteButton{
+        padding:2px 5px;
+        border-radius: 5px;
+        color:red;
+        border:1px dotted red
+      }
+    }
+
   }
-}
