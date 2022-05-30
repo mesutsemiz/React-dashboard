@@ -8,6 +8,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
+
 const List = () => {
   const rows = [
     {
@@ -61,6 +62,7 @@ const List = () => {
       status: "Pending",
     },
   ];
+
   return (
     <TableContainer component={Paper} className="table">
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
