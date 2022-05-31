@@ -7,10 +7,11 @@ import New from './pages/new/New';
 import Single from "./pages/single/Single"
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {userInputs,productInputs} from "./formSource"
+import "./style/dark.scss"
 
 function App() {
   return (
-    <div className="App">
+    <div className="App dark">
       <BrowserRouter>
         <Routes>
           <Route path="/">
