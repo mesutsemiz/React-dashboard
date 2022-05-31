@@ -8,9 +8,10 @@ const Datatable = () => {
   const [data, setData]=useState(userRows)
 
   const handleDelete=(id)=>{
-    setData(data.filter(item=>item.id !== id))
-
+    console.log(id,"id")
+    setData(data.filter((item)=>item.id !== id))
   }
+
   const actionColumn = [
     {
       field: 'action',
@@ -22,7 +23,7 @@ const Datatable = () => {
             <Link to="/users/test">
             <div className="viewButton">View</div>
             </Link>
-            <div className="deleteButton" onClick={()=>handleDelete(params.row.id)}>Delete</div>
+            <div className="deleteButton" style={{cursor:"pointer"}} onClick={()=>handleDelete(params.row.id)}>Delete</div>
           </div>
         );
       },
@@ -38,7 +39,7 @@ const Datatable = () => {
       </div>
       <DataGrid
       className="datagrid"
-        rows={userRows}
+        rows={data}
         columns={userColumns.concat(actionColumn)}
         pageSize={5}
         rowsPerPageOptions={[5]}
