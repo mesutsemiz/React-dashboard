@@ -6,17 +6,10 @@ import List from './pages/list/List';
 import New from './pages/new/New';
 import Single from "./pages/single/Single"
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import {userInputs,productInputs} from "./formSource"
-import "./style/dark.scss"
-import {DarkModeContext} from "./context/darkModeContext";
-import {useContext} from "react"
 
 function App() {
-
-  const {darkMode}=useContext(DarkModeContext)
-
   return (
-    <div className={darkMode ? "App dark" : "App"}>
+    <div className="App">
       <BrowserRouter>
         <Routes>
           <Route path="/">
@@ -25,12 +18,12 @@ function App() {
             <Route path="users">
               <Route index element={<List />} />
               <Route path=":userId" element={<Single />} />
-              <Route path="new" element={<New inputs={userInputs} title="Add a new user"/>} />
+              <Route path="new" element={<New />} />
             </Route>
             <Route path="products">
               <Route index element={<List />} />
               <Route path=":productId" element={<Single />} />
-              <Route path="new" element={<New inputs={productInputs} title="Add a new product"/>} />
+              <Route path="new" element={<New />} />
             </Route>
           </Route>
         </Routes>

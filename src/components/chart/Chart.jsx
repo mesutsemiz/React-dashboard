@@ -19,11 +19,11 @@ const data = [
   { name: 'June', Total: 900 },
 ];
 
-const Chart = ({aspect,title}) => {
+const Chart = () => {
   return (
     <div className="chart">
-      <div className="title">{title}</div>
-      <ResponsiveContainer width="100%" aspect={aspect}>
+      <div className="title">Last 6 months (Revenue)</div>
+      <ResponsiveContainer width="100%" aspect={3/2}>
         <AreaChart
           width={730}
           height={250}
@@ -38,7 +38,7 @@ const Chart = ({aspect,title}) => {
           </defs>
           <XAxis dataKey="name" />
          
-          <CartesianGrid strokeDasharray="3 3" className="chatGrid" stroke="rgba(100,200,100,0.5)"  />
+          <CartesianGrid strokeDasharray="3 3" className="chatGrid" stroke="gray"  />
           <Tooltip />
           <Area
             type="monotone"
